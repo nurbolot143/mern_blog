@@ -7,16 +7,18 @@ import { AddPost, FullPost, Home, Login, Registration } from "./pages";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <div className="bg-gray-100 min-h-screen">
+        <Header />
 
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/fullPost" element={<FullPost />} />
-          <Route path="/addPost" element={<AddPost />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/fullPost" element={<FullPost />} />
+            <Route path="/addPost" element={<AddPost />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Registration />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );
