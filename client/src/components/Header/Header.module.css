@@ -14,6 +14,8 @@
   border-radius: 3px;
   font-size: 15px;
   font-weight: normal;
+  color: #5656ca;
+  background: #fff;
 }
 
 .btn:hover {
@@ -24,30 +26,7 @@
   margin-left: 15px;
 }
 
-.login {
-  color: #5656ca;
-  background: #fff;
-}
-
-.register {
+.colored {
   color: #fff;
   background: #5656ca;
-}
-
-.border {
-  position: relative;
-}
-
-.border::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background: #5656ca;
-}
-
-.active {
-  display: none;
 }

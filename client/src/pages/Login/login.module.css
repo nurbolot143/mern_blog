@@ -1,0 +1,46 @@
+.wrapper {
+  width: 300px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input,
+.btn {
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-size: 20px;
+}
+
+.input {
+  border: 1px solid #5656ca;
+}
+
+.input:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+.btn {
+  margin-top: 20px;
+  background: #5656ca;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
