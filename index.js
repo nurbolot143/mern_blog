@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import multer from "multer";
+import cors from "cors";
 
 import {
   loginValidation,
@@ -13,7 +14,7 @@ import config from "./config.js";
 
 mongoose
   .connect(
-    `mongodb+srv://Nurbolot:${config.secret}@cluster0.rs7yl3c.mongodb.net/blog?retryWrites=true&w=majority`
+    `mongodb+srv://Nurbolot:${config.password}@cluster0.rs7yl3c.mongodb.net/blog?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("DB Ok");
@@ -38,6 +39,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.use(express.json());
+
+app.use(cors());
 
 app.use("/uploads", express.static("uploads"));
 
