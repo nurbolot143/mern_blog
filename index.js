@@ -13,9 +13,7 @@ import { checkAuth, handleValidationErrors } from "./utils/index.js";
 import config from "./config.js";
 
 mongoose
-  .connect(
-    `mongodb+srv://Nurbolot:${config.password}@cluster0.rs7yl3c.mongodb.net/blog?retryWrites=true&w=majority`
-  )
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("DB Ok");
   })
