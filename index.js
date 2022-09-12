@@ -13,7 +13,9 @@ import { checkAuth, handleValidationErrors } from "./utils/index.js";
 import config from "./config.js";
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(
+    `mongodb+srv://Nurbolot:${config.password}@cluster0.rs7yl3c.mongodb.net/blog?retryWrites=true&w=majority`
+  )
   .then(() => {
     console.log("DB Ok");
   })
@@ -94,6 +96,8 @@ app.patch(
 );
 
 app.delete("/posts/:id", checkAuth, PostController.remove);
+
+app.get("/tags/:tag", PostController.getPostsByTag);
 //-------
 
 app.listen(PORT, (err) => {

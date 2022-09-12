@@ -132,3 +132,15 @@ export const update = async (req, res) => {
     });
   }
 };
+
+export const getPostsByTag = async (req, res) => {
+  try {
+    const tag = req.params.tag;
+    const posts = await PostModel.find({ tags: tag });
+
+    res.json(posts);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Не удалось найти посты!" });
+  }
+};
